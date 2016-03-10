@@ -1,0 +1,3 @@
+# remember, source me, don't run me
+export GOPATH=$HOME/repos/fun/go
+export PATH=$HOME/repos/fun/go/bin:$PATH
