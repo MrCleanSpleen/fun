@@ -7,7 +7,8 @@ import (
 )
 func Dice() {
 	sides := []
-	const sides = ('''
+	const (
+	sides = ('''
  -----
 |     |
 |  0  |
@@ -15,7 +16,7 @@ func Dice() {
  -----
 	''')
 
-	const sides = ('''
+	 sides = ('''
  -----
 |    0|
 |     |
@@ -23,7 +24,7 @@ func Dice() {
  -----
 	''')
 
-	const sides = ('''
+	 sides = ('''
  -----
 |    0|
 |  0  |
@@ -31,7 +32,7 @@ func Dice() {
  -----
 	''')	
 
-	const sides = ('''
+	 sides = ('''
  -----
 |0   0|
 |     |
@@ -39,7 +40,7 @@ func Dice() {
  -----
 	''')
 
-	const sides = ('''
+	 sides = ('''
  -----
 |0   0| 
 |  0  |
@@ -47,14 +48,14 @@ func Dice() {
  -----
 	''')
 
-	const sides = ('''
+	 sides = ('''
  -----
 |0 0 0| 
 |     |
 |0 0 0|
  -----
 	''')
-
+)
 	for {
 		side := r.Strings(sides)
 		fmt.Print(c.Clear + c.Rc() + side + c.X)
