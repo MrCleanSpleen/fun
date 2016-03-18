@@ -1,64 +1,65 @@
 package dice
+
 import (
 	"fmt"
-	c"github.com/skilstak/go/colors"
-	r"github.com/skilstak/go/choice"
-	i"github.com/skilstak/go/input"
+	r "github.com/skilstak/go/choice"
+	c "github.com/skilstak/go/colors"
+	i "github.com/skilstak/go/input"
 )
+
 func Dice() {
-	sides := []
 	const (
-	sides = ('''
+		side1 = (`
  -----
 |     |
 |  0  |
 |     |
  -----
-	''')
-
-	 sides = ('''
+	`)
+		side2 = (`
  -----
 |    0|
 |     |
 |0    |
  -----
-	''')
+	`)
 
-	 sides = ('''
+		side3 = (`
  -----
 |    0|
 |  0  |
 |0    |
  -----
-	''')	
+	`)
 
-	 sides = ('''
+		side4 = (`
  -----
 |0   0|
 |     |
 |0   0|
  -----
-	''')
+	`)
 
-	 sides = ('''
+		side5 = (`
  -----
 |0   0| 
 |  0  |
 |0   0|
  -----
-	''')
+	`)
 
-	 sides = ('''
+		side6 = (`
  -----
 |0 0 0| 
 |     |
 |0 0 0|
  -----
-	''')
-)
+	`)
+	)
+	sides := []string{side1, side2, side3, side4, side5, side6}
 	for {
 		side := r.Strings(sides)
 		fmt.Print(c.Clear + c.Rc() + side + c.X)
-		i.Ask()
+		i.Ask("")
 	}
 }
