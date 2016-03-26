@@ -51,3 +51,54 @@ func main() {
       fmt.Print(c.Rc() + "Nyan " + c.X)
     }
 }
+```
+
+Waffles in Golang
+
+1.0
+```
+package main
+
+import (
+    "fmt"
+    i "github.com/skilstak/go/input"
+)
+
+func main() {
+
+    waffles := i.Ask("Do you like Waffles? ")
+}
+```
+2.0
+```
+package main
+
+import (
+    "fmt"
+    i "github.com/skilstak/go/input"
+)
+
+func main() {
+    waffles := i.Ask("Do you like Waffles? ")
+    if waffles == "yes" {
+        fmt.Println("Do do dah do, can't wait to get a mouthfull!")
+    }
+}
+```
+3.0
+```
+package main
+
+import (
+    "fmt"
+    i "github.com/skilstak/go/input"
+)
+
+func main() {
+    waffles := i.Ask("Do you like Waffles? ")
+    if waffles == "yes" {
+        fmt.Println("Do do dah do, can't wait to get a mouthfull!")
+    } else {
+          fmt.Println("Humph. :(")
+    }
+}
