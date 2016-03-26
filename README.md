@@ -1,7 +1,5 @@
 # fun
-programs in golang, python, javascript, and any other languages
-I learn to serve as a reference point in later projects.
-
+The fundamentals of golang, python, and any other language I learn.
 Nyan in Golang
 
 
@@ -28,3 +26,28 @@ func main() {
 3.0
 ```
 
+package main
+
+import (
+    "fmt"
+    c "github.com/skilstak/go/colors"
+)
+
+func main() {
+    fmt.Print(c.Rc() + "Nyan " + c.X)
+}
+```
+4.0
+```
+package main
+
+import (
+    "fmt"
+    c "github.com/skilstak/go/colors"
+)
+
+func main() {
+    for {
+      fmt.Print(c.Rc() + "Nyan " + c.X)
+    }
+}
