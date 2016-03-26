@@ -1,7 +1,7 @@
 # fun
 The fundamentals of golang, python, and any other language I learn.
-Nyan in Golang
 
+Nyan in Golang
 
 1.0
 ```
