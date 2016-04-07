@@ -2,9 +2,9 @@ package quiz
 
 import (
 	"fmt"
-	r "github.com/skilstak/go-random"
 	c "github.com/skilstak/go/colors"
 	i "github.com/skilstak/go/input"
+	"math/rand"
 	"strings"
 	t "time"
 )
@@ -46,8 +46,35 @@ func Q3() bool {
 	No()
 	return false
 }
-func Questions() {
-	questions := []func(){Q1, Q2, Q3}
-	quiz := (questions)
+
+func RandItem(list []func() bool) func() bool {
+	rand.Seed(time.Now().UnixNano())
+	randNum := rand.Intn(len(list))
+	randElement := list[randNum]
+	return randElement
+}
+
+func Remove(value []func() bool, item func() bool) []func() bool {
+	var index int
+	for p, v := range slice {
+		if v == value {
+			index = p
+		}
+	}
+	var result []func() bool
+	result = append(result, slice[0:index]...)
+	// Append part after the removed element.
+	result = append(result, slice[index+1:]...)
+	return result
+}
+func main() {
+	questions := []func() bool{Q1, Q2, Q3}
+	for {
+		question := RandItem(questions)
+		correct := question()
+		if correct {
+			questions = Remove(question)
+		}
+	}
 
 }
