@@ -66,10 +66,11 @@ func Remove(slice []func() bool, item func() bool) []func() bool {
 		}
 	}
 	var result []func() bool
-	result = append(result[:index], result[index+1:]...)
+	result = append(result, slice[0:index]...)
+	// Append part after the removed element.
+	result = append(result, slice[index+1:]...)
 	return result
 }
-
 func Questions() {
 	questions := []func() bool{Q1, Q2, Q3}
 	for questions != nil {
@@ -78,4 +79,5 @@ func Questions() {
 			questions = Remove(questions, question)
 		}
 	}
+
 }
