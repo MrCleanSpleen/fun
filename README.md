@@ -4,7 +4,7 @@ The fundamentals of golang, python, and any other language I learn.
 Nyan in Golang
 
 1.0
-```
+```golang
 package main
 import (
   "fmt"
@@ -12,7 +12,7 @@ import (
 )
 ```
 2.0
-```
+```golang
 package main
 import (
     "fmt"
@@ -24,7 +24,7 @@ func main() {
 }
 ```
 3.0
-```
+```golang
 
 package main
 
@@ -38,7 +38,7 @@ func main() {
 }
 ```
 4.0
-```
+```golang
 package main
 
 import (
@@ -56,7 +56,7 @@ func main() {
 Waffles in Golang
 
 1.0
-```
+```golang
 package main
 
 import (
@@ -70,7 +70,7 @@ func main() {
 }
 ```
 2.0
-```
+```golang
 package main
 
 import (
@@ -86,7 +86,7 @@ func main() {
 }
 ```
 3.0
-```
+```golang
 package main
 
 import (
@@ -104,7 +104,7 @@ func main() {
 }
 ```
 4.0
-```
+```golang
 package main
 
 import (
@@ -130,7 +130,7 @@ func main() {
 }
 ```
 5.0
-```
+```golang
 package main
 
 import (
