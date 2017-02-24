@@ -35,6 +35,7 @@ func Weather(loc string) {
 	var record Data
 	if err := json.NewDecoder(resp.Body).Decode(&record); err != nil {
 		log.Println(err)
+		err := json.Unmarshal(b, &record)
 	}
 	fmt.Println("City: ", record.Name)
 	fmt.Println("Temperature: ", record.Temp)
