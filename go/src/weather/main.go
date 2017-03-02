@@ -16,11 +16,11 @@ func Weather(loc string) {
 	loct := url.QueryEscape(loc)
 	url := fmt.Sprintf("http://api.openweathermap.org/data/2.5/weather?q=", loct, "&appid=6a4cbda1e239084151dea640a95d2a0c&units=", units)
 	type Data struct {
-		Name string  `json:"name"`
-		Temp float64 `json:"main,temp"`
-		Main	[]struct	{
-			Temp	float64	`json:"temp"`
-			Pressure	int	`json:"pressure"`
+		Name string `json:"name"`
+		//Temp float64 `json:"main,temp"`
+		Main []struct {
+			Temp     float64 `json:"temp"`
+			Pressure int     `json:"pressure"`
 		}
 	}
 	req, err := http.NewRequest("GET", url, nil)
@@ -39,9 +39,9 @@ func Weather(loc string) {
 		log.Println(err)
 		//		err := json.Unmarshal(b, &record)
 	}
-	foo2 := {}
-	getJson("http://example.com", &foo2)
-	println(foo2.Bar)
+	//[foo2 := {}
+	//[	getJson("http://example.com", &foo2)
+	//[	println(foo2.Bar)
 	fmt.Println("City: ", weather.Name)
 	//	fmt.Println("Temperature: ", weather.Temp)
 	//	fmt.Println("Country: ", weather.Country)
