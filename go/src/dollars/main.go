@@ -23,9 +23,11 @@ func main() {
 	fmt.Println(format2.Rates["USD"])
 	curen1 := format2.Rates[cur1]
 	curen2 := format2.Rates[cur2]
-	rate := float(cur1) / float(cur2)
+	curen1 float
+	curen2 float
+	rate := cur1 / cur2
 	amount := float(mount)
-	cur3 := float(rate) * float(amount)
+	cur3 := rate * amount
 	fmt.Println(amount, "of", cur1, "transfers to", cur3, cur2, "at a rate of", rate)
 }
 
