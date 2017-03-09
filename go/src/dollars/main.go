@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	CurrencyTransfer("GBP", "USD", 10.0)
+	CurrencyTransfer("MXN", "USD", 10.0)
 }
 func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
 	type Format struct {
@@ -27,7 +27,6 @@ func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
 
 //http://stackoverflow.com/questions/17156371/how-to-get-json-response-in-golang
 func get_json(url string, target interface{}) error {
-	//if it works, it works
 	var myClient = &http.Client{Timeout: 10 * time.Second}
 	r, err := myClient.Get(url)
 	if err != nil {
