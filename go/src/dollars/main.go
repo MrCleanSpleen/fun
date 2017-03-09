@@ -20,8 +20,6 @@ func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
 	get_json("http://api.fixer.io/latest", &format2)
 	curen1 := format2.Rates[cur1]
 	curen2 := format2.Rates[cur2]
-	//r1 := strconv.ParseFloat(curen1, 64)
-	//r2 := strconv.ParseFloat(curen2, 64)
 	rate := curen1 / curen2
 	cur3 := rate * amount
 	fmt.Println(amount, cur2, "transfers to", cur3, cur1, "at a rate of", rate)
