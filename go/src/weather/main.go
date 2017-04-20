@@ -26,16 +26,11 @@ func Weather(loc string) {
 	url := fmt.Sprintf("http://api.openweathermap.org/data/2.5/weather?q=", loct, "&appid=6a4cbda1e239084151dea640a95d2a0c&units=", units)
 	type Data struct {
 		Name string `json:"name"`
-		Temp int    `json:"main,temp"`
-		//Main []struct {
-		//	Temp     float64 `json:"temp"`
-		//	Pressure int     `json:"pressure"`
-		//}
+		Main []int  `json:"main"`
 	}
 	data2 := Data{}
 	get_json(url, &data2)
-	fmt.Println(data2.Temp)
-
+	fmt.Println(data2.Main["temp"])
 }
 func main() {
 	Weather("charlotte")
