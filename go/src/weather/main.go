@@ -44,5 +44,5 @@ func Weather(loc string) {
 	//	fmt.Println(data2.Main[])
 }
 func main() {
-	Weather("charlotte")
+	Weather("davidson,us")
 }

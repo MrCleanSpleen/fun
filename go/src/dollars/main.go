@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	CurrencyTransfer("MXN", "USD", 10.0)
+	CurrencyTransfer("USD", "RUB", 50.0)
 }
 func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
 	type Format struct {
