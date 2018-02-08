@@ -24,7 +24,7 @@ func Weather(loc string) {
 	// Gets weather data for a given city and returns it.
 	units := "imperial"
 	loct := url.QueryEscape(loc)
-	url := fmt.Sprintf("http://api.openweathermap.org/data/2.5/weather?q=", loct, "&appid=6a4cbda1e239084151dea640a95d2a0c&units=", units)
+	url := fmt.Sprintf("http://api.openweathermap.org/data/2.5/weather?q=", loct, "&appid=b6907d289e10d714a6e88b30761fae22&units=", units)
 	type Coord struct {
 		Lon float64 `json:"lon"`
 		Lat float64 `json:"lat"`
@@ -44,5 +44,6 @@ func Weather(loc string) {
 	//	fmt.Println(data2.Main[])
 }
 func main() {
-	Weather("davidson,us")
+	//	Weather("Charlotte")
+	fmt.Println(data2.Main["temp"])
 }
