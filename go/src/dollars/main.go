@@ -4,13 +4,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
+	"strconv"
 	"time"
 )
 
 func main() {
-	CurrencyTransfer("USD", "GBP", 1.0)
+	amnt := os.Args[1]
+	curen1 := os.Args[2]
+	curen2 := os.Args[3]
+	CurrencyTransfer(curen2, curen1, amnt)
 }
-func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
+func CurrencyTransfer(cur1 string, cur2 string, amount string) {
 	type Format struct {
 		Base  string             `json:"base"`
 		Date  string             `json:"date"`
@@ -20,9 +25,10 @@ func CurrencyTransfer(cur1 string, cur2 string, amount float64) {
 	get_json("http://api.fixer.io/latest", &format2)
 	curen1 := format2.Rates[cur1]
 	curen2 := format2.Rates[cur2]
+	num, _ := strconv.ParseFloat(amount, 64)
 	rate := curen1 / curen2
-	cur3 := rate * amount
-	fmt.Println(amount, cur2, "transfers to", cur3, cur1, "at a rate of", rate)
+	cur3 := rate * num
+	fmt.Println(num, cur2, "transfers to", cur3, cur1, "at a rate of", rate)
 }
 
 //http://stackoverflow.com/questions/17156371/how-to-get-json-response-in-golang
